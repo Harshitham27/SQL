@@ -1,0 +1,13 @@
+USE movies;
+CREATE TABLE snacks(id int not null,s_name varchar(20),s_cost int,s_id int primary key,s_batchno int);
+INSERT INTO snacks values(1,'Kurkure',10,101,2721);
+INSERT INTO snacks values(2,'chips',50,102,2732);
+INSERT INTO snacks values(3,'icecream',100,103,2536);
+INSERT INTO snacks values(4,'candy',50,104,2722);
+INSERT INTO snacks values(5,'biscuits',150,105,2743);
+SELECT *FROM snacks;
+ALTER TABLE snacks ADD CONSTRAINT s_name_uni unique (s_name);
+ALTER TABLE snacks DROP PRIMARY KEY;
+DESC snacks;
+ALTER TABLE snacks ADD CONSTRAINT s_batchno_pk primary key (s_batchno);
+ALTER TABLE snacks DROP PRIMARY KEY;
